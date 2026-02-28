@@ -1,26 +1,34 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Letogether</title>
 
-    <link rel="manifest" href="/manifest.json">
-    
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="theme-color" content="#4285f4">
+    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
+    <meta name="theme-color" content="#4285f4" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Letogether" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
 
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
+          // 加上 '/' 确保从根目录寻找 sw.js
           navigator.serviceWorker.register('/sw.js')
-            .then(reg => console.log('PWA 服务已就绪:', reg.scope))
-            .catch(err => console.log('PWA 注册失败:', err));
+            .then(reg => {
+              console.log('PWA 服务已就绪，作用域:', reg.scope);
+            })
+            .catch(err => {
+              console.error('PWA 注册失败:', err);
+            });
         });
       }
     </script>
-    </head>
+  </head>
   
   <body>
     <div id="root"></div>
