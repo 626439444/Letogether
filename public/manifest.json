@@ -1,14 +1,14 @@
 {
-  "short_name": "我的AI助手",
-  "name": "Gemini AI 智能应用",
+  "short_name": "Letogether",
+  "name": "Letogether - 周末时光助手",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "/icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icon-512.png",
+      "src": "/icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -17,5 +17,5 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "theme_color": "#4285f4",
-  "description": "基于 Gemini 的超强 AI 工具"
+  "description": "与 Letogether 一起探索周末时光"
 }
