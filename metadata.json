@@ -1,0 +1,7 @@
+{
+  "name": "CityVibe 同城约",
+  "description": "一个连接同城陌生人的社交平台，发现有趣的棋牌、运动、户外、CoffeeChat及亲子活动。",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
